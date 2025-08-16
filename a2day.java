@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class a2day {
         //program to search an element in an arrayList
@@ -26,6 +27,10 @@ public class a2day {
         arLis.add(74);
         arLis.add(81);
         arLis.add(53);
+
+        for(int i= arLis.size()-1; i >= 0; i--){
+            System.out.println(arLis.get(i));
+        }
         
         System.out.println("Original List" + arLis);
 
