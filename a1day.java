@@ -3,6 +3,17 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class a1day {
+    //Program to remove an element from a specific index
+    public static void removeIndex(ArrayList<Integer> lis, int index ){
+        if(index>=0 && index<=lis.size() ){
+            lis.remove(index);
+            System.out.println("Updated arraylist: "+ lis);
+        }else{
+            System.out.println("Invalid index.");
+        }
+    }
+
+
 
         //function to replace an element at a specific index with new value
     public static void replaceEle(ArrayList<Integer>li, int index, int newVal){
@@ -37,6 +48,11 @@ public class a1day {
         numbers.add(30);
         numbers.add(40);
         System.out.println("Original ArrayList: " + numbers);
+
+        //removing element from specific index
+        System.out.print("Enter the index of element you want to remove: ");
+        int ind = sc.nextInt();
+        removeIndex(numbers,ind);
 
 
         //replacing element from an index
