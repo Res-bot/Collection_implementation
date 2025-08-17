@@ -3,6 +3,23 @@ import java.util.Collections;
 
 
 public class a2day {
+
+        //program to remove duplicate entries from an array
+        public static void removeDopple(ArrayList<Integer> arli3){
+            for(int i=1; i<=arli3.size()-1; i++){
+                for(int j=i+1; j<=arli3.size()-1; j++){
+                    if(arli3.get(i).equals(arli3.get(j))){
+                        arli3.remove(j);
+                        j--;
+                    }
+                }
+            }
+            System.out.print(arli3);
+        }
+
+
+
+
         //program to merge two arrayLists
 
         public static void mrgLis(ArrayList<Integer> arli1, ArrayList<Integer> arli2){
@@ -64,6 +81,17 @@ public class a2day {
         arrlis2.add(38);
 
         mrgLis(arrlis1, arrlis2);
+
+
+        ArrayList<Integer> arrlis3 = new ArrayList<>();
+        arrlis3.add(10);
+        arrlis3.add(11);
+        arrlis3.add(12);
+        arrlis3.add(12);
+        arrlis3.add(13);
+        arrlis3.add(14);
+
+        removeDopple(arrlis3);
 
         
     }
