@@ -28,5 +28,35 @@ public class compare {
         System.out.println("the sorted arraylist(on the basis of the unit digit) is: " + arli);
 
 
+        //program to create an array of strings and sort the string array on the basis of the length of the string
+
+        Comparator<String> comStr = new Comparator<String>() {
+            public int compare(String i, String j){
+                if(i.length()> j.length()){
+                    return 1;
+                }
+                else{
+                    return -1;
+                }
+            }
+        };
+
+        List<String> strAr = new ArrayList<String>();
+
+        strAr.add("r");
+        strAr.add("ram");
+        strAr.add("ramana");
+        strAr.add("rama");
+        strAr.add("raman");
+
+        System.out.println("Unsorted array on the basis of string length: " + strAr);
+
+        Collections.sort(strAr, comStr);
+
+        System.out.println("Sorted array on the basis of string length: " + strAr);
+
+
+
+
     }
 }
